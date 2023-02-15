@@ -1,4 +1,5 @@
 import { Text, View, TextInput, TouchableOpacity } from "react-native";
+import { User } from "../../components/User";
 import { styles } from "./styles";
 
 export function Home() {
@@ -22,6 +23,8 @@ export function Home() {
           <Text style={styles.btnText}>+</Text>
         </TouchableOpacity>
       </View>
+
+      <User />
     </View>
   );
 }
