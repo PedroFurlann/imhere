@@ -18,4 +18,13 @@ export const styles = StyleSheet.create({
     color: "#6B6B6B",
     fontSize: 16,
   },
+
+  input: {
+    backgroundColor: '#1f1e25',
+    height: 56,
+    borderRadius: 5,
+    color: '#fff',
+    padding: 16,
+    fontSize: 16,
+  }
 });
