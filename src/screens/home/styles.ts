@@ -20,11 +20,35 @@ export const styles = StyleSheet.create({
   },
 
   input: {
-    backgroundColor: '#1f1e25',
+    backgroundColor: "#1f1e25",
     height: 56,
     borderRadius: 5,
-    color: '#fff',
+    color: "#fff",
     padding: 16,
     fontSize: 16,
+    flex: 1,
+    marginRight: 12,
+  },
+
+  btnText: {
+    color: "#fff",
+    fontSize: 18,
+  },
+
+  btn: {
+    width: 56,
+    height: 56,
+    borderRadius: 5,
+    backgroundColor: '#31cf67',
+
+    alignItems: "center",
+    justifyContent: "center"
+  },
+
+  form: {
+    width: '100%',
+    flexDirection: 'row',
+    marginTop: 36,
+    marginBottom: 42,
   }
 });
