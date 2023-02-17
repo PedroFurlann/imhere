@@ -1,32 +1,41 @@
+import { useState } from "react";
 import {
   Text,
   View,
   TextInput,
   TouchableOpacity,
   FlatList,
+  Alert,
 } from "react-native";
 import { User } from "../../components/User";
 import { styles } from "./styles";
 
 export function Home() {
-  const participants = [
-    "Rodrigo",
-    "Vini",
-    "Pedro",
-    "Diego",
-    "Ana",
-    "Jack",
-    "Isa",
-    "Mayk",
-    "João",
-  ];
+  const [participants, setParticipants] = useState<string[]>(["João"]);
 
   function handleParticipantAdd() {
-    console.log("Você clicou no botão de adicionar");
+    if (participants.includes("Rodrigo")) {
+      return Alert.alert(
+        "Participante existente",
+        "Já existe uma participante na lista com esse nome"
+      );
+    }
+
+    setParticipants(state => [...state, 'Ana'])
   }
 
   function handleParticipantRemove(name: string) {
-    console.log(`Você removeu o participante ${name}`);
+    Alert.alert("Remover", `Deseja remover o participante ${name}?`, [
+      {
+        text: "Sim",
+        onPress: () => Alert.alert(`Participate ${name} deletado com sucesso!`),
+      },
+
+      {
+        text: "Não",
+        style: "cancel",
+      },
+    ]);
   }
 
   return (
