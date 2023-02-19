@@ -46,7 +46,7 @@ export function Home() {
     <View style={styles.container}>
       <Text style={styles.eventName}>Nome do evento</Text>
 
-      <Text style={styles.eventDate}>Sexta, 4 de Novembro de 2022.</Text>
+      <Text style={styles.eventDate}>Segunda, 13 de Fevereiro de 2023.</Text>
 
       <View style={styles.form}>
         <TextInput
